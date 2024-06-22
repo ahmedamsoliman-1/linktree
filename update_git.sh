@@ -29,4 +29,6 @@ git config user.email "ahmed.soliman@avrioc.com"
 
 git branch --set-upstream-to=origin/test "$branch"
 
+npm run deploy
+
 sleep 3s
