@@ -14,7 +14,7 @@ const App: React.FC = () => {
   return (
     <Container>
       <Typography variant="h2" align="center" gutterBottom>
-        My Linktree
+        Ahmed Ali Moh Soliman
       </Typography>
       <LinkList links={links} />
     </Container>
