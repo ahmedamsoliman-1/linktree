@@ -1,0 +1,11 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="136" fill="url(#background)"/>
+  <path d="M161 139V373" stroke="white" stroke-width="48" stroke-linecap="round"/>
+  <path d="M185 151H294C355 151 389 190 389 244C389 299 355 337 294 337H249" stroke="white" stroke-width="48" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M238 244H365" stroke="url(#signal)" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="386" cy="244" r="18" fill="url(#signal)"/>
+  <defs>
+    <linearGradient id="background" x1="72" y1="61" x2="438" y2="467" gradientUnits="userSpaceOnUse"><stop stop-color="#A994FF"/><stop offset=".48" stop-color="#7657F6"/><stop offset="1" stop-color="#482BCB"/></linearGradient>
+    <linearGradient id="signal" x1="238" y1="244" x2="404" y2="244" gradientUnits="userSpaceOnUse"><stop stop-color="#F8E2FF"/><stop offset="1" stop-color="#FFCB9C"/></linearGradient>
+  </defs>
+</svg>

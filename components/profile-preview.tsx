@@ -3,6 +3,7 @@
 import { ArrowUpRight, MoreHorizontal, Share2 } from "lucide-react";
 import type { Profile } from "@/lib/types";
 import { LinkIcon } from "./icon";
+import { PulseLogo } from "./pulse-logo";
 
 export function ProfilePreview({ profile, compact = false }: { profile: Profile; compact?: boolean }) {
   const visibleLinks = profile.links.filter((link) => link.active);
@@ -15,7 +16,7 @@ export function ProfilePreview({ profile, compact = false }: { profile: Profile;
       <div className="preview-orb orb-one" />
       <div className="preview-orb orb-two" />
       <div className="profile-actions">
-        <span className="profile-brand">PULSE</span>
+        <PulseLogo light />
         <button className="icon-button" onClick={share} aria-label="Copy profile link"><Share2 size={18} /></button>
       </div>
       <div className="profile-card">

@@ -8,6 +8,7 @@ import { defaultProfile } from "@/lib/default-profile";
 import type { Link, Profile } from "@/lib/types";
 import { LinkIcon } from "./icon";
 import { ProfilePreview } from "./profile-preview";
+import { PulseLogo } from "./pulse-logo";
 
 const iconOptions: Link["icon"][] = ["globe", "instagram", "linkedin", "youtube", "music"];
 
@@ -64,7 +65,7 @@ export function Dashboard() {
   return (
     <main className="app-shell">
       <aside className="sidebar">
-        <a className="wordmark" href="/"><span>P</span> PULSE</a>
+        <a className="wordmark" href="/"><PulseLogo /></a>
         <nav>
           <a className="nav-item active" href="#links"><Link2 size={19} /> Links</a>
           <a className="nav-item" href="#appearance"><Sparkles size={19} /> Appearance</a>
