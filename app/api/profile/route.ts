@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { defaultProfile } from "@/lib/default-profile";
+import { normalizeProfile } from "@/lib/profile";
 import { redis } from "@/lib/redis";
 import type { Profile } from "@/lib/types";
 import { firebaseAdminConfigured, verifyFirebaseToken } from "@/lib/firebase-admin";
@@ -9,11 +10,11 @@ const key = (username: string) => `pulse:profile:${username.toLowerCase()}`;
 export async function GET(request: NextRequest) {
   const username = request.nextUrl.searchParams.get("username") || defaultProfile.username;
   const savedProfile = redis ? await redis.get<Profile>(key(username)) : null;
-  return NextResponse.json(savedProfile || { ...defaultProfile, username });
+  return NextResponse.json(normalizeProfile(savedProfile || defaultProfile, username));
 }
 
 export async function PUT(request: NextRequest) {
-  const profile = (await request.json()) as Profile;
+  const profile = normalizeProfile((await request.json()) as Profile);
   if (!profile.username || !profile.name || !Array.isArray(profile.links)) {
     return NextResponse.json({ error: "A username, name, and links are required." }, { status: 400 });
   }
